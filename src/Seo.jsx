@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function SEO(props) {
-  url = props.url
+  var url = props.url
   if(props.language === "ENG"){
     url = "eng/" + url
   }
