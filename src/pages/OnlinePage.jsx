@@ -1,6 +1,7 @@
 import React from 'react';
 
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
+import SEO from 'Seo.jsx';
 
 import Header from "newComponents/Header/Header.jsx";
 import Footer from "newComponents/Footer/Footer.jsx";
@@ -14,14 +15,12 @@ export default function AboutPage(props){
   
   return (
     <AnimationRevealPage>
+      <SEO language = {props.language} url="online"/>
       <Header language = {props.language} />
       <OnlineHeader language = {props.language} />
       <CoursePlans language = {props.language} removeButton = {true} removeMYP = {true} isOnline = {true}/>
-
       <ImportanceHero language = {props.language} />
-      
       <TrialLesson language = {props.language}/>
-      
       <Footer language = {props.language}/>
     </AnimationRevealPage>
   );

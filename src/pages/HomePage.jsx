@@ -9,25 +9,24 @@ import StartJourneyHero from 'newComponents/Home/StartJourney';
 import TestimonialComponent from "newComponents/Home/Testimonial.jsx";
 import Header from "newComponents/Header/Header.jsx";
 import Footer from "newComponents/Footer/Footer.jsx";
+import SEO from 'Seo.jsx';
 
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-
 
 export default function HomePage(props){
   
   return (
       <AnimationRevealPage>
+        <SEO language = {props.language} url=""/>
         <Header language = {props.language} />
         <Hero language = {props.language}/>
         <Concerns language = {props.language}/>
         <TrialLesson language = {props.language}/>
         <KeyAspects language = {props.language}/>
         <StartJourneyHero language = {props.language}/>
-
         <CoursePlans language = {props.language}/>
         <TestimonialComponent language = {props.language} isHome={true}/>
         <Footer language = {props.language}/>
       </AnimationRevealPage>
-    
   );
 }
