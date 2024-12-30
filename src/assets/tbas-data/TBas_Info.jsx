@@ -23,7 +23,7 @@ import hand from "assets/tbas-images/courses/hand.jpeg";
 
 export const header_footer = [
   {
-    links: ["T-BASとは", "授業について", "対面レッスン", "オンラインレッスン", "講師紹介", "ご利用者の声", "FAQ", "アクセス", "講師募集申込み", "体験レッスン・入塾相談"],
+    links: ["T-BASとは", "授業について", "対面レッスン", "オンラインレッスン", "講師紹介", "ご利用者の声", "FAQ", "アクセス", "講師募集申込み", "体験レッスン・入塾相談", "体験レッスン・入塾相談"],
     endpoints:["aboutTbas", "inPerson", "online", "tutors", "feedback", "faq", "access", "apply", "contact"],
     address: (<>〒194-0041 東京都町田市玉川学園 <HiddenBr_BreakPoint2/>2-11-22高橋ビル301</>),
     phone: "TEL/FAX：042-851-8680",
