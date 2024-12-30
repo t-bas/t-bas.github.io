@@ -51,7 +51,7 @@ border-t-[20px] border-t-tbasMain-purple500
 border-b-[20px] border-b-tbasMain-purple500
 border-l-[25px] border-l-transparent`;
 
-const FlexTriangle = tw.div`flex flex-col`
+const FlexTriangle = tw.div`flex flex-col`;
 
 const Bullets = tw.ul`list-disc font-YuGothic font-light text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl
 pl-8`;
@@ -85,10 +85,16 @@ export default function ContactForm(props) {
         <FlowHeading tw="pt-8 lg:pt-16">{currInfo.flowSubHeading}</FlowHeading>
         <FlowContainer>
           <Row tw="hidden md:flex">
-            <Arrow>
-              <ArrowText>{currInfo.flow[0]}</ArrowText>
-              <Triangle tw="border-l-main-red border-b-transparent border-t-transparent"/>
-            </Arrow>
+            {props.language === "ENG" ?
+              <Arrow tw="basis-1/5">
+                <ArrowText>{currInfo.flow[0]}</ArrowText>
+                <Triangle tw="border-l-main-red border-b-transparent border-t-transparent"/>
+              </Arrow>
+              :<Arrow>
+                <ArrowText>{currInfo.flow[0]}</ArrowText>
+                <Triangle tw="border-l-main-red border-b-transparent border-t-transparent"/>
+              </Arrow>
+            }
             <FlexTriangle>
               <Arrow>
                 <SmallerTriangle />
@@ -101,11 +107,18 @@ export default function ContactForm(props) {
                 <SmallerTriangle tw="border-l-tbasMain-purple500 border-t-transparent border-b-transparent"/>
               </Arrow>
             </FlexTriangle>
-            <Arrow>
-              <Triangle />
-              <ArrowText tw="bg-tbasMain-purple500">{currInfo.flow[3]}</ArrowText>
-              <Triangle tw="border-l-tbasMain-purple500 border-t-transparent border-b-transparent"/>
-            </Arrow>
+            {props.language === "ENG" ?
+              <Arrow tw="basis-1/5">
+                <Triangle />
+                <ArrowText tw="bg-tbasMain-purple500">{currInfo.flow[3]}</ArrowText>
+                <Triangle tw="border-l-tbasMain-purple500 border-t-transparent border-b-transparent"/>
+              </Arrow>
+              :<Arrow>
+                <Triangle />
+                <ArrowText tw="bg-tbasMain-purple500">{currInfo.flow[3]}</ArrowText>
+                <Triangle tw="border-l-tbasMain-purple500 border-t-transparent border-b-transparent"/>
+              </Arrow>
+            }
             <Arrow>
               <Triangle tw="border-l-transparent border-t-tbasMain-purple700 border-b-tbasMain-purple700"/>
               <ArrowText tw="bg-tbasMain-purple700 px-4">{currInfo.flow[4]}</ArrowText>
